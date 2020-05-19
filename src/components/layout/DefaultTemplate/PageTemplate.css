@@ -1,0 +1,17 @@
+@media screen and (max-width: 400px) {
+  .MainDrawer .ant-drawer-content-wrapper {
+    width: 100% !important;
+  }
+
+  .MainDrawer .ant-card {
+    width: 100%;
+  }
+
+  .MainDrawer .ant-card-body {
+    padding: 20px 12px;
+  }
+
+  .MainDrawer .ant-card-meta-title {
+    margin-bottom: 0 !important;
+  }
+}
