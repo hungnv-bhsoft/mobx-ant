@@ -5,7 +5,7 @@ import { ProjectContext } from '../../stores/ProjectStore';
 // import '../../assets/imgs/';
 import { Modal, Button, Space } from 'antd';
 import { ExclamationCircleOutlined } from '@ant-design/icons';
-import AntModal from './AntModal';
+// import AntModal from './AntModal';
 import AntEditForm from './AntEditForm';
 
 const Li = styled.li`

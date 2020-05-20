@@ -5,6 +5,7 @@ import ProjectStore from '../../../stores/ProjectStore';
 import List from '../../antdComponent/List';
 import theme from '../../../theme';
 import AntModal from '../../antdComponent/AntModal';
+import DefaultTemplate from '../../layout/DefaultTemplate';
 //antd
 
 
@@ -18,6 +19,7 @@ const Header = styled.header`
 
 export default () => {
     return (
+        <>
         <ProjectStore>
         <ThemeProvider theme={theme}>
         <Header>
@@ -26,5 +28,7 @@ export default () => {
         <List />
         </ThemeProvider>
         </ProjectStore>
+        </>
+
     );
 };

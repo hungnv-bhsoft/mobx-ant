@@ -4,11 +4,13 @@ import styled from 'styled-components';
 import { useParams } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { Button } from 'antd';
+import DefaultTemplate from '../../layout/DefaultTemplate';
 
 const DetailWrap = styled.div`
     width: 1100px;
     margin: 0 auto;
     text-align: center;
+    padding: 50px;
 `;
 
 const CardImg = styled.img`
@@ -33,7 +35,7 @@ export default () => {
     let detail = projects.filter( pro => pro.id == Id)[0];
     // console.log(detail);
     return (
-    <div>
+    <DefaultTemplate>
         {detail !== undefined && (
             <DetailWrap>
                 <h3>{detail.title}</h3>
@@ -42,7 +44,6 @@ export default () => {
                 <Button type="primary" onClick={ () => history.push('/projects') } >Back</Button>
             </DetailWrap>
         )}
-
-    </div>
+    </DefaultTemplate>
     )
 };

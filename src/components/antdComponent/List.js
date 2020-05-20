@@ -23,7 +23,7 @@ const List = () => {
     React.useEffect(() => {
         fetchProjects();
 
-    },[fetchProjects]);
+    },[]);
 
 
 
@@ -33,7 +33,7 @@ const List = () => {
 
         return  (
             <Ul>
-                {listPro[0] !== undefined && listPro[0].map( project => {
+                {listPro !== undefined && listPro.map( project => {
                     return <Item key={project.id}  {...project} />
                 })}
             </Ul>

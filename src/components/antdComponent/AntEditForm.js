@@ -28,8 +28,8 @@ const AntForm = ({ pId, onOk,loading }) => {
     // console.log(pId);
 
     const store = React.useContext(ProjectContext);
-    const { projects } = toJS(store);
-    const proDetail = projects.length > 0 && projects[0].filter( pro => pro.id == pId)[0];
+    const listPro = toJS(store.listProject);
+    const proDetail = listPro.length > 0 && listPro.filter( pro => pro.id == pId)[0];
     // console.log(proDetail);
 
     const [form] = Form.useForm();
@@ -63,8 +63,9 @@ const AntForm = ({ pId, onOk,loading }) => {
     // }
 
     const onFinish = values => {
-            console.log(values);
+            console.log('get id project want edit',pId);
             store.editProject(pId,{
+                id : pId,
                 title: values.title,
                 content: values.content,
                 image : values.image.file.name
